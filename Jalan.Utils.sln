@@ -5,7 +5,13 @@ VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jalan.Utils.Log4net", "Jalan.Utils.Log4net\Jalan.Utils.Log4net.csproj", "{322AEAFA-E7A1-43DA-901A-C1FB28DE4225}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jalan.Utils.Expansion", "Jalan.Utils.Expansion\Jalan.Utils.Expansion.csproj", "{2B1F2B95-28E8-4AFB-A5C4-67AA2C227A51}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jalan.Utils.Common", "Jalan.Utils.Common\Jalan.Utils.Common.csproj", "{703AE304-9D59-4A7C-9E61-B22633D2BD76}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jalan.Utils.Tester", "Jalan.Utils.Tester\Jalan.Utils.Tester.csproj", "{28F4FB6C-4E23-4FA6-92EA-79BE5A32287A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jalan.Utils.Attributes", "Jalan.Utils.Attributes\Jalan.Utils.Attributes.csproj", "{CECCF97D-A6EC-4240-8B1D-337F5576CF3D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jalan.Utils.Extension", "Jalan.Utils.Extension\Jalan.Utils.Extension.csproj", "{C6F4FD61-C6C8-418C-A5E1-086576268C89}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +23,22 @@ Global
 		{322AEAFA-E7A1-43DA-901A-C1FB28DE4225}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{322AEAFA-E7A1-43DA-901A-C1FB28DE4225}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{322AEAFA-E7A1-43DA-901A-C1FB28DE4225}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2B1F2B95-28E8-4AFB-A5C4-67AA2C227A51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2B1F2B95-28E8-4AFB-A5C4-67AA2C227A51}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2B1F2B95-28E8-4AFB-A5C4-67AA2C227A51}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2B1F2B95-28E8-4AFB-A5C4-67AA2C227A51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{703AE304-9D59-4A7C-9E61-B22633D2BD76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{703AE304-9D59-4A7C-9E61-B22633D2BD76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{703AE304-9D59-4A7C-9E61-B22633D2BD76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{703AE304-9D59-4A7C-9E61-B22633D2BD76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28F4FB6C-4E23-4FA6-92EA-79BE5A32287A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28F4FB6C-4E23-4FA6-92EA-79BE5A32287A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28F4FB6C-4E23-4FA6-92EA-79BE5A32287A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28F4FB6C-4E23-4FA6-92EA-79BE5A32287A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CECCF97D-A6EC-4240-8B1D-337F5576CF3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CECCF97D-A6EC-4240-8B1D-337F5576CF3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CECCF97D-A6EC-4240-8B1D-337F5576CF3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CECCF97D-A6EC-4240-8B1D-337F5576CF3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6F4FD61-C6C8-418C-A5E1-086576268C89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6F4FD61-C6C8-418C-A5E1-086576268C89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6F4FD61-C6C8-418C-A5E1-086576268C89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6F4FD61-C6C8-418C-A5E1-086576268C89}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
