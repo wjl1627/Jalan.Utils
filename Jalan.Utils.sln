@@ -3,7 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jalan.Utils.Log4net", "Jalan.Utils.Log4net\Jalan.Utils.Log4net.csproj", "{322AEAFA-E7A1-43DA-901A-C1FB28DE4225}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jalan.Utils.Expansion", "Jalan.Utils.Expansion\Jalan.Utils.Expansion.csproj", "{2B1F2B95-28E8-4AFB-A5C4-67AA2C227A51}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{322AEAFA-E7A1-43DA-901A-C1FB28DE4225}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{322AEAFA-E7A1-43DA-901A-C1FB28DE4225}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{322AEAFA-E7A1-43DA-901A-C1FB28DE4225}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{322AEAFA-E7A1-43DA-901A-C1FB28DE4225}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B1F2B95-28E8-4AFB-A5C4-67AA2C227A51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B1F2B95-28E8-4AFB-A5C4-67AA2C227A51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B1F2B95-28E8-4AFB-A5C4-67AA2C227A51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B1F2B95-28E8-4AFB-A5C4-67AA2C227A51}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
