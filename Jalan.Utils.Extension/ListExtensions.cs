@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 namespace Jalan.Utils.Extension
 {
-
     public static class ListExtensions
     {
         /// <summary>

@@ -3,7 +3,6 @@ using System;
 
 namespace Jalan.Utils.Extension
 {
-
     public static class NPOIICellExtensions
     {
         public static bool TryGetCellDateValue(this ICell cell, out DateTime date)

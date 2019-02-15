@@ -61,7 +61,6 @@
     <Compile Include="DESCodeUtil.cs" />
     <Compile Include="ExcelUtil.cs" />
     <Compile Include="GzipUtil.cs" />
-    <Compile Include="NumberToUpper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

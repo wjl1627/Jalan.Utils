@@ -56,11 +56,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DictionaryExtension.cs" />
-    <Compile Include="DynamicObjectExtension.cs" />
-    <Compile Include="IQueryableExtension.cs" />
-    <Compile Include="ListExtension.cs" />
-    <Compile Include="NPOIICellExtension.cs" />
+    <Compile Include="DictionaryExtensions.cs" />
+    <Compile Include="DynamicObjectExtensions.cs" />
+    <Compile Include="IQueryableExtensions.cs" />
+    <Compile Include="ListExtensions.cs" />
+    <Compile Include="NPOIICellExtensions.cs" />
+    <Compile Include="NumberExtensions.cs" />
     <Compile Include="ObjectExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

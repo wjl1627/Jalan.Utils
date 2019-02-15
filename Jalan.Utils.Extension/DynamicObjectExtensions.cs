@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace Jalan.Utils.Extension
 {
-    public class DynamicObjectExtension : DynamicObject
+    public class DynamicObjectExtensions : DynamicObject
     {
         public Dictionary<string, object> PropertiesExt = new Dictionary<string, object>();
-        public DynamicObjectExtension()
+        public DynamicObjectExtensions()
         {
             //var t = this.GetDynamicMemberNames();
             //var props = this.GetType().GetProperties();
@@ -20,7 +20,7 @@ namespace Jalan.Utils.Extension
             //        PropertiesExt.Add(p.Name, p.GetValue(this, null));
             //}
         }
-        public DynamicObjectExtension(Dictionary<string, object> properties) : this()
+        public DynamicObjectExtensions(Dictionary<string, object> properties) : this()
         {
             foreach (var item in properties)
             {

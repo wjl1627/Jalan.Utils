@@ -48,5 +48,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Jalan.Utils.Common\Jalan.Utils.Common.csproj">
+      <Project>{703ae304-9d59-4a7c-9e61-b22633d2bd76}</Project>
+      <Name>Jalan.Utils.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

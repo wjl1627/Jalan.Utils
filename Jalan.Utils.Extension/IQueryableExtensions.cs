@@ -5,7 +5,7 @@ using System.Linq.Expressions;
 
 namespace Jalan.Utils.Extension
 {
-    public static class IQueryableExpansion
+    public static class IQueryableExpansions
     {
         /// <summary>
         /// 模糊查询一组数据，满足一组数据的模糊查询
