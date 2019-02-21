@@ -64,31 +64,69 @@ namespace Jalan.Utils.Extension
         /// </summary>
         /// <param name="money">一个双精度金额</param>
         /// <returns>返回一个财务大写金额</returns>
-        public static string MoneyToUpper(this double money)
+        public static string MoneyToUpper(this decimal money)
         {
-            if ((money * 100 - Math.Floor(money * 100) != 0) || money > double.MaxValue)
+            if (money == 0)
             {
-                return "只保留两位小数";//只要两位小数
+                return "零元整";
+            }
+            if (money > decimal.MaxValue)
+            {
+                return "金额超过存储最大值";
+            }
+            if ((money * 10000 - Math.Floor(money * 10000) != 0))
+            {
+                return "只保留四位小数";//只要两位小数
             }
             var retulstring = string.Empty;
             //文本化
-            string value = Math.Floor(money * 100).ToString();
-            string pointRigjtLowerValue = value.Substring(value.Length - 2, 2);
-            string pointLeftLowerValue = value.Substring(0, value.Length - 2);
-            //取小数
-            string pointRigjtUpperValue = string.Empty;
-            if (pointRigjtLowerValue == "00")
+            string value = Math.Floor(money * 10000).ToString();
+            string pointRightLowerValue = string.Empty;
+            string pointLeftLowerValue = string.Empty;
+
+            if (value.Length >= 4)
             {
-                pointRigjtUpperValue = "整";
+                pointRightLowerValue = value.Substring(value.Length - 4);
+                pointLeftLowerValue = value.Substring(0, value.Length - 4);
+            }
+            //取小数
+            StringBuilder pointRigjtUpperValue = new StringBuilder();
+            if (pointRightLowerValue.PadLeft(4, '0') == "0000")
+            {
+                pointRigjtUpperValue.Append("整");
             }
             else
             {
-                var j = _numbersUpper[Convert.ToInt16(pointRigjtLowerValue.Substring(0, 1))];
-                var f = _numbersUpper[Convert.ToInt16(pointRigjtLowerValue.Substring(1, 1))];
-                if (j != "0")
-                    pointRigjtUpperValue = j + "角";
-                if (f != "0")
-                    pointRigjtUpperValue += f + "分";
+                var array = pointRightLowerValue.ToArray();
+                for (int i = 0; i < array.Length; i++)
+                {
+                    var temp = array[i];
+                    if (temp == '0')
+                    {
+                        //pointRigjtUpperValue.Append("零");
+                        continue;
+                    }
+                    pointRigjtUpperValue.Append(_numbersUpper[Convert.ToInt32(temp.ToString())]);
+                    switch (i)
+                    {
+                        case 0:
+                            pointRigjtUpperValue.Append("角");
+                            break;
+                        case 1:
+                            pointRigjtUpperValue.Append("分");
+                            break;
+                        case 2:
+                            pointRigjtUpperValue.Append("毫");
+                            break;
+                        case 3:
+                            pointRigjtUpperValue.Append("厘");
+                            break;
+                        default:
+                            break;
+                    }
+                }
+                //pointRigjtUpperValue = pointRigjtUpperValue.Replace("零零零", "零");
+                //pointRigjtUpperValue = pointRigjtUpperValue.Replace("零零", "零");
             }
             //4位一取，保证元、万、亿
             List<string> pointLeftValues = new List<string>();
@@ -121,6 +159,10 @@ namespace Jalan.Utils.Extension
                         else
                             str = str.Insert(0, "零");
                     }
+                }
+                if (string.IsNullOrEmpty(str))
+                {
+                    continue;
                 }
                 //多于的0去掉
                 str = str + "X";
