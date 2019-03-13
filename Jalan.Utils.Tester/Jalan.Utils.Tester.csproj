@@ -53,6 +53,10 @@
       <Project>{703ae304-9d59-4a7c-9e61-b22633d2bd76}</Project>
       <Name>Jalan.Utils.Common</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Jalan.Utils.Log4net\Jalan.Utils.Log4net.csproj">
+      <Project>{322aeafa-e7a1-43da-901a-c1fb28de4225}</Project>
+      <Name>Jalan.Utils.Log4net</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

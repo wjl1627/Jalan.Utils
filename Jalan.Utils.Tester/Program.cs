@@ -1,4 +1,5 @@
 ﻿using Jalan.Utils.Common;
+using Jalan.Utils.Log4net;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,21 +12,34 @@ namespace Jalan.Utils.Tester
     {
         static void Main(string[] args)
         {
-            var isTrue = true;
-            decimal value ;
-            while (isTrue)
+
+            Logger logger = new Logger();
+            //logger.Error<Program>("fdsafdsa");
+            logger.WriteInfo("aaaaaaaaaaaa");
+            try
             {
-                Console.WriteLine("请输入数字：");
-                var input = Console.ReadLine();
-                if (decimal.TryParse(input, out value))
-                {
-                    var result = NumberToUpper.ConvertToUpper(value);
-                    Console.WriteLine(result);
-                }
-                else {
-                    break;
-                }
+                throw new NullReferenceException("zzzz");
             }
+            catch (Exception ex)
+            {
+                logger.WriteError(ex);
+            }
+
+            //var isTrue = true;
+            //decimal value ;
+            //while (isTrue)
+            //{
+            //    Console.WriteLine("请输入数字：");
+            //    var input = Console.ReadLine();
+            //    if (decimal.TryParse(input, out value))
+            //    {
+            //        var result = NumberToUpper.ConvertToUpper(value);
+            //        Console.WriteLine(result);
+            //    }
+            //    else {
+            //        break;
+            //    }
+            //}
             Console.Read();
         }
     }
