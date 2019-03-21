@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="AttributeValueUtil.cs" />
     <Compile Include="CacheThread.cs" />
+    <Compile Include="DataConvertUtil.cs" />
     <Compile Include="DESCodeUtil.cs" />
     <Compile Include="ExcelUtil.cs" />
     <Compile Include="GzipUtil.cs" />
