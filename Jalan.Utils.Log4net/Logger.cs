@@ -52,6 +52,18 @@ namespace Jalan.Utils.Log4net
         {
             this.GetLogger(this.CurrentType).Info(obj);
         }
+        public void WriteDebug(object obj)
+        {
+            this.GetLogger(this.CurrentType).Debug(obj);
+        }
+        public void WriteWarn(object obj)
+        {
+            this.GetLogger(this.CurrentType).Warn(obj);
+        }
+        public void WriteFatal(object obj)
+        {
+            this.GetLogger(this.CurrentType).Fatal(obj);
+        }
     }
 }
 
