@@ -1,4 +1,6 @@
-﻿using System;
+﻿using log4net;
+using log4net.Repository;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +12,7 @@ namespace Jalan.Utils.Log4net
     public class Logger
     {
         private Type _type;
-
+        public static ILoggerRepository repository { get; set; }
         public Type CurrentType
         {
             get
@@ -25,8 +27,9 @@ namespace Jalan.Utils.Log4net
         }
         public Logger()
         {
+            repository = LogManager.CreateRepository("NETCoreRepository");
             //配置log4
-            log4net.Config.XmlConfigurator.Configure(new System.IO.FileInfo(System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "log4net.config")));
+            log4net.Config.XmlConfigurator.Configure(repository,new System.IO.FileInfo(System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "log4net.config")));
         }
         public Logger(Type type)
         {

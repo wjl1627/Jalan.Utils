@@ -12,18 +12,12 @@ namespace Jalan.Utils.Tester
     {
         static void Main(string[] args)
         {
-
-            Logger logger = new Logger();
-            //logger.Error<Program>("fdsafdsa");
-            logger.WriteInfo("aaaaaaaaaaaa");
-            try
-            {
-                throw new NullReferenceException("zzzz");
-            }
-            catch (Exception ex)
-            {
-                logger.WriteError(ex);
-            }
+            var key = Guid.NewGuid().ToString();
+            var t = DESCodeUtil.ToDES_Encrypt("02734072", key);
+            Console.WriteLine(t);
+            Console.WriteLine(DESCodeUtil.ToMd5(t));
+            t = DESCodeUtil.ToDES_Decrypt(t, key);
+            Console.WriteLine(t);
 
             //var isTrue = true;
             //decimal value ;
