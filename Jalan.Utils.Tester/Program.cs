@@ -36,5 +36,18 @@ namespace Jalan.Utils.Tester
             //}
             Console.Read();
         }
+
+        public static void CacheTest()
+        {
+            //查询数据源
+            List<Person> personData = new List<Person>();
+            personData.Add(new Person() { Id = Guid.NewGuid(), Code = "101", Name = "张三" });
+
+            //放进缓存 默认2分半钟自动释放
+            var cachePersonData = new CacheThread<List<Person>>(personData);
+
+            //从缓存取数据
+            personData = cachePersonData.DictionaryData;
+        }
     }
 }

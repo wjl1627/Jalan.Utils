@@ -52,6 +52,19 @@
                 _timer.Elapsed += new System.Timers.ElapsedEventHandler(_timer_Elapsed);
             }
         }
+        /// <summary>
+        /// 创建缓存
+        /// </summary>
+        /// <param name="obj">要缓存的对象</param>
+        /// <param name="enableDataClean">是否启用自动清理数据</param>
+        /// <param name="defaultTime">自动清理时间间隔 单位 毫秒</param>
+        public CacheThread(T obj,bool enableDataClean = true, double defaultTime = 1000 * 30 * 5) : base()
+        {
+            this._enableDataClean = enableDataClean;
+            if (defaultTime > 0)
+                _defaultTime = defaultTime;
+            this.DictionaryData = obj;
+        }
 
         void _timer_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
         {
