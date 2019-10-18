@@ -84,10 +84,12 @@ namespace Jalan.Utils.Extension
             {
                 T value1 = default(T);
                 T value2 = default(T);
-                if (x.ContainsKey(sort))
-                    value1 = x[sort];
-                if (y.ContainsKey(sort))
-                    value2 = y[sort];
+                var xkeys = x.Keys.ToDictionary(k => k.ToLower(), v => v);
+                var ykeys = y.Keys.ToDictionary(k => k.ToLower(), v => v);
+                if (xkeys.ContainsKey(sort))
+                    value1 = x[xkeys[sort]];
+                if (ykeys.ContainsKey(sort))
+                    value2 = y[ykeys[sort]];
                 if (value1 == null || value1.ToString() == "")
                 {
                     if (value2 == null || value2.ToString() == "")
