@@ -69,5 +69,40 @@ namespace Jalan.Utils.Extension
                 sorted.Add(item);
             }
         }
+
+
+        /// <summary>
+        /// 对List<Dictionary<string,object>>指定key排序
+        /// </summary>
+        /// <param name="data"></param>
+        /// <param name="sort">排序列</param>
+        /// <param name="dir">排序方式 asc / desc</param>
+        public static void ListDictCompareTo<T>(this List<Dictionary<string, T>> data, string sort, string dir)
+        {
+            var isAsc = dir.ToLower() == "asc";
+            data.Sort((x, y) =>
+            {
+                T value1 = default(T);
+                T value2 = default(T);
+                if (x.ContainsKey(sort))
+                    value1 = x[sort];
+                if (y.ContainsKey(sort))
+                    value2 = y[sort];
+                if (value1 == null || value1.ToString() == "")
+                {
+                    if (value2 == null || value2.ToString() == "")
+                    {
+                        return 0;
+                    }
+                    return isAsc ? -1 : 1;
+                }
+                if (value2 == null || value2.ToString() == "")
+                {
+                    return isAsc ? 1 : -1;
+                }
+                var sortIndex = value1.ToString().CompareTo(value2.ToString());
+                return isAsc ? sortIndex : -sortIndex;
+            });
+        }
     }
 }
