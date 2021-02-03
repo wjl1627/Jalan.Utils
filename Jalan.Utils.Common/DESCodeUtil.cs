@@ -72,6 +72,8 @@ namespace Jalan.Utils.Common
         }
 
         public static string ToMd5(string value) {
+            if (string.IsNullOrEmpty(value))
+                return null;
             MD5CryptoServiceProvider md5Hasher = new MD5CryptoServiceProvider();
             byte[] hashedDataBytes = md5Hasher.ComputeHash(_encoding.GetBytes(value));
             StringBuilder tmp = new StringBuilder();
